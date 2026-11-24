@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="서범규의 경력과 프로젝트를 검색하는 포트폴리오 챗봇">
+  <title>포트폴리오 Q&A 챗봇</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="portfolio-answers.js" defer></script>
+  <script src="portfolio-chat.js" defer></script>
+</head>
+<body>
+  <main class="intro">
+    <a class="portfolio-link" href="https://beomkyu-seo-portfolio.tallsheep5.chatgpt.site/">서범규 포트폴리오</a>
+    <h1>포트폴리오<br>Q&A 챗봇</h1>
+    <p>군 통신망 운영, 사내 IT 경험, 인프라 모니터링 랩, 헬프데스크에 관해 질문해 보세요. 답변과 관련 페이지를 함께 보여줍니다.</p>
+    <button class="chat-launch button" type="button" aria-haspopup="dialog" hidden>챗봇에게 물어보기</button>
+  </main>
+  <dialog class="chat-dialog" aria-labelledby="chat-title" data-root="https://beomkyu-seo-portfolio.tallsheep5.chatgpt.site/">
+    <header class="chat-header">
+      <div><h2 id="chat-title">포트폴리오 챗봇</h2><p id="chat-mode">포트폴리오 자료 검색</p></div>
+      <button class="chat-close" type="button" aria-label="챗봇 닫기">×</button>
+    </header>
+    <div class="chat-log" role="log" aria-live="polite" aria-label="대화">
+      <article class="chat-message chat-assistant"><strong>챗봇</strong><p>안녕하세요! 서범규님의 경력이나 프로젝트에서 궁금한 점이 있나요?</p></article>
+    </div>
+    <div class="chat-suggestions" aria-label="예시 질문">
+      <button type="button">인프라 모니터링 랩에서 뭘 구현했어요?</button>
+      <button type="button">헬프데스크는 매뉴얼을 어떻게 찾아요?</button>
+      <button type="button">군에서는 어떤 일을 했어요?</button>
+    </div>
+    <form class="chat-form">
+      <label class="chat-label" for="chat-input">질문</label>
+      <input id="chat-input" name="question" maxlength="500" placeholder="어떤 점이 궁금하세요?" required autofocus>
+      <button class="button" type="submit">보내기</button>
+    </form>
+  </dialog>
+</body>
+</html>
